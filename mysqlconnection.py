@@ -1,4 +1,3 @@
-""" Import Oracle's python connector for MySQL """
 import mysql.connector
 import collections
 def _convert(data):
