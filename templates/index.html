@@ -1,0 +1,32 @@
+<html>
+<head>
+	<title>Good Browser Games</title>
+	<meta charset="utf-8"/>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<h2>Jogos</h2>
+				<table class="table">
+				    <thead>
+				      <tr>
+				        <th>Nome </th>
+				        <th>Categoria</th>
+				      </tr>
+				    </thead>
+				    <tbody>{% for jogo in jogos: %}
+				      <tr>
+				        <td>{{jogo['nome']}}</td>
+				        <td>{{jogo['categoria']}}</td>
+				        <td><a href='/showjogopage/{{jogo["id"]}}'>Show</a> | <a href="/editjogopage/{{jogo['id']}}">Edit</a> | <a href="/delete/{{jogo['id']}}">Delete</a></td>
+				        {% endfor %}
+				      </tr>
+				    </tbody>
+				</table>
+				<h4><a href="/addjogopage">Adicione um novo jogo</a></td></h4>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

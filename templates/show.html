@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>Descriçoes</title>
+	<meta charset="utf-8"/>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				{% for jogo in jogos: %}
+				<h1>Jogo {{jogo['id']}}</h1>
+				<p>Informações do jogo {{jogo['id']}}</p>
+				        <h2>Nome: {{jogo['nome']}}</h2>
+				        <h2>Categoria: {{jogo['categoria']}}</h2>
+				<a href="/editjogopage/{{jogo['id']}}">Edit</a> | <a href="/delete/{{jogo['id']}}">Delete</a></td>
+				        {% endfor %}
+				<h4><a href="/addjogopage">Adicione um novo jogo</a></h4>
+				<a href="/back">Go Back</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
